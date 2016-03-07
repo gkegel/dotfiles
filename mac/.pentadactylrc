@@ -1,0 +1,67 @@
+"hg7127
+
+loadplugins '\.(js|penta)$'
+group user
+highlight -link=FontFixed CmdLine color: inherit; background: inherit;
+highlight CmdNormal color:#969896; background:#1b1b1b;
+highlight CompDesc color: #cc9393; width: 55%;
+highlight CompGroup color: inherit; font-weight: bold;
+highlight CompIcon display: none;
+highlight CompItem color:inherit; background:inherit; font-weight:normal;
+highlight CompItem:nth-child(2n+1) none;
+highlight CompItem[selected] color:#f0c674; background:#434443;
+highlight CompTitle font-weight: bold; color:#ffcfaf; background:#1b1b1b;
+highlight CompTitleSep display: none;
+highlight ErrorMsg color: #80d4aa; font-weight: bold;
+highlight Filter color: #ffffff; font-weight:bold;
+highlight Hint font-family: Consolas; font-size: 16px !important; font-weight: bold; color: white; background-color: black; border-color: ButtonShadow; border-width: 0px; border-style: solid; padding: 0px 2px 0px 2px;
+highlight Indicator color: #93b3a3; font-weight: bold; width:1em; text-align: center;
+highlight InfoMsg color:#f8f893;
+highlight ModeMsg color:#ffcfaf;
+highlight MoreMsg color:#b5bd68;
+highlight NonText color:#5b605e; font-weight:bold;
+highlight Normal color: #969896; background:#282a2e;
+highlight Question color: #82a282; background: #282a2e; font-weight: bold;
+highlight StatusErrorMsg color:#80d4aa !important;
+highlight StatusInfoMsg color:#f8f893 !important; font-weight:inherit;
+highlight -link=FontFixed StatusLine font-weight: normal; padding-right: 5px; min-height: 14px;
+highlight StatusLineBroken color: #ffa0a0; background: #1d1f21;
+highlight StatusLineExtended color: #a0ffa0; background: #282a2e;
+highlight StatusLineNormal color: #969896; background: #282a2e;
+highlight StatusLineSecure color: #81a2be; background: #282a2e;
+highlight StatusModeMsg color:#ffcfaf !important;
+highlight StatusMoreMsg color:#b5bd68 !important; font-weight:bold;
+highlight StatusNormal: background: #282a2e;
+highlight StatusQuestion color: #82a282; background: #282a2e; font-weight: bold;
+highlight StatusWarningMsg color:#dfe4cf !important; font-weight:bold !important;
+highlight String color: #cc9393; white-space: pre;
+highlight Title color:#ffcfaf; font-weight:bold;
+highlight URL color: #7f9f7f;
+highlight WarningMsg color: #dfe4cf; font-weight: bold;
+map -count -modes=n,v , <count><Leader>
+map -count -modes=n ; -builtin <count>:
+map -count -modes=n : -builtin <count>;
+map -modes=n -silent <A-x> -javascript commands.execute('!quvi "' + content.location.href.replace(/([$`"\\])/g, "\\$1") + '" &> /dev/null &');
+map -count -modes=n <C-a> <Nop>
+map -count -modes=n <C-h> <Nop>
+map -count -modes=n <C-j> <Nop>
+map -count -modes=n <C-k> <Nop>
+map -count -modes=n <C-l> <Nop>
+map -count -modes=n <C-S-N> -builtin <count>:tabmove!<Space>+1<Return>
+map -count -modes=n <C-S-P> -builtin <count>:tabmove!<Space>-1<Return>
+map -count -modes=n <Leader>, -builtin <count>:noh<Return>
+map -count -modes=n <Leader>d -builtin <count>:tabopen<Space>about:downloads<Return>
+map -count -modes=n <Leader>m -builtin <count>:messages<Return>
+map -count -modes=n <Leader>p -builtin <count>:private<Space>winopen<Return>
+map -count -modes=n j -builtin <count>5j
+map -count -modes=n k -builtin <count>5k
+map -modes=n,v l -ex bnext
+map -count -modes=n x -builtin <count>;l
+map -modes=n,v h -ex bprevious
+map -count -modes=v ; -builtin <count>:
+map -count -modes=v : -builtin <count>;
+set guioptions=Csn
+set hintkeys=asdfjkl;
+set passkeys=github.com:<Return>
+
+" vim: set ft=pentadactyl:
