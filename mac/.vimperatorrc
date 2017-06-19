@@ -1,0 +1,31 @@
+"3.16.0 (created: 2017/02/01 00:55:15)
+
+source! /Users/grzegorzkegel/.vimperatorrc.local
+
+"no address bar and other not needed shit 
+set gui=none,tabs
+
+"set to dark colourscheme
+colorscheme  darkness
+
+"increase scroll speed
+nnoremap j 3j
+nnoremap k 3k
+nnoremap <C-j> 3j
+nnoremap <C-k> 3k
+
+"more intuitive PgUp/PgDn
+nnoremap J <C-d>
+nnoremap K <C-u>
+
+"next/previous tab
+nnoremap h <C-p>
+nnoremap l <C-n>
+
+"hint keys home row
+set hintchars=asdf;ghjkl
+
+"hint style
+highlight Hint font-size:150%;color:white;background-color:black;padding:3px
+
+" vim: set ft=vimperator:
